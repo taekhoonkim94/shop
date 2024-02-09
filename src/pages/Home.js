@@ -1,15 +1,11 @@
-import { useState } from 'react';
-import data from '../data/data';
-import Header from '../components/common/Header';
 import ProductList from '../components/product/ProductList';
 
-const Exhibition = () => {
-    const [shoes] = useState(data);
+const Home = ({
+    shoes
+}) => {
 
     return (
         <>
-            <Header />
-
             <div className="main-bg"></div>
 
             <div className="container">
@@ -21,4 +17,4 @@ const Exhibition = () => {
     )
 }
 
-export default Exhibition;
+export default Home;
