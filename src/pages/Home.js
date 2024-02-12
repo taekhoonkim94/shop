@@ -1,7 +1,8 @@
 import ProductList from '../components/product/ProductList';
 
 const Home = ({
-    shoes
+    shoes,
+    setShoes
 }) => {
 
     return (
@@ -10,7 +11,7 @@ const Home = ({
 
             <div className="container">
                 <div className="row">
-                    <ProductList shoes={shoes} />
+                    <ProductList shoes={shoes} setShoes={setShoes} />
                 </div>
             </div>
         </>

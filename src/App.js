@@ -12,13 +12,13 @@ import { useState } from 'react';
 import data from './data/data';
 
 function App() {
-    const [shoes] = useState(data);
+    const [shoes, setShoes] = useState(data);
     
     return (
         <div className="App">
             <Header shoes={shoes} />
             <Routes>
-                <Route path={ROUTE.HOME} element={<Home shoes={shoes} />} />
+                <Route path={ROUTE.HOME} element={<Home shoes={shoes} setShoes={setShoes} />} />
                 <Route path={ROUTE.ABOUT} element={<About />}>
                     <Route path={ROUTE.MEMBER} element={<Member />} />
                     <Route path={ROUTE.LOCATION} element={<Location />} />
