@@ -10,7 +10,7 @@ const Header = ({
     
     return (
         <>
-            <Navbar bg="dark" data-bs-theme="dark">
+            <Navbar bg="light" data-bs-theme="light">
                 <Container>
                     <Navbar.Brand onClick={() => navigate(ROUTE.HOME)}>Shop</Navbar.Brand>
                     <Nav className="me-auto">

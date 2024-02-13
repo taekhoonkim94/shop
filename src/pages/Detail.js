@@ -1,5 +1,6 @@
 import { useParams } from "react-router-dom";
 import PageNotFound from "./PageNotFound";
+import TabContent from '../components/product/TabContent';
 import { useState, useEffect } from "react";
 
 const Detail = ({
@@ -7,9 +8,10 @@ const Detail = ({
 }) => {
     const { id } = useParams();
     const item = shoes.find(v => v.id === Number(id));
-
     const countNumber = 5;
+
     const [count, setCount] = useState(countNumber);
+    const [tab, setTab] = useState(0);
 
     useEffect(() => {
         setTimeout(() => {
@@ -40,6 +42,8 @@ const Detail = ({
                         <button className="btn btn-danger">주문하기</button>
                     </div>
                 </div>
+
+                <TabContent tab={tab} setTab={setTab} />
             </div>
         </>
     )

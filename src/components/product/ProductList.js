@@ -19,8 +19,9 @@ const ProductList = ({
                 setShoes(list);
                 setUrlNumber(urlNumber + 1);
             })
-            .catch(() => {
-                console.log('Error fetching product list');
+            .catch((error) => {
+                console.log('이미지 에러 =====')
+                console.error('Error fetching product list:', error);
             })
         }
     }
@@ -35,6 +36,7 @@ const ProductList = ({
                             src={`https://codingapple1.github.io/shop/shoes${item.id + 1}.jpg`}
                             width="80%"
                             className="img-detail"
+                            onError={(e) => e.target.src = 'https://codingapple1.github.io/shop/shoes1.jpg'} // TODO 404 image url
                         />
                     </Link>
                     <h4>{item.title}</h4>
@@ -45,7 +47,7 @@ const ProductList = ({
                     </p>
                 </div>
             ))}
-            <Button variant="dark" onClick={addProductList}>Dark</Button>
+            <Button variant="dark" onClick={addProductList}>더보기</Button>
         </>
     )
 }
