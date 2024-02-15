@@ -15,8 +15,9 @@ const Header = ({
                     <Navbar.Brand onClick={() => navigate(ROUTE.HOME)}>Shop</Navbar.Brand>
                     <Nav className="me-auto">
                         <Nav.Link onClick={() => navigate(ROUTE.HOME)}>Home</Nav.Link>
-                        <Nav.Link onClick={() => navigate(ROUTE.ABOUT)}>About</Nav.Link>
-                        <Nav.Link onClick={() => navigate(`/detail/${id}`)}>Detail</Nav.Link>
+                        {/* <Nav.Link onClick={() => navigate(ROUTE.ABOUT)}>About</Nav.Link> */}
+                        {/* <Nav.Link onClick={() => navigate(`/detail/${id}`)}>Detail</Nav.Link> */}
+                        <Nav.Link onClick={() => navigate(ROUTE.CART)}>Cart</Nav.Link>
                     </Nav>
                 </Container>
             </Navbar>

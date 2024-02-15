@@ -6,6 +6,7 @@ import About from './pages/About';
 import Member from './components/about/Member';
 import Location from './components/about/Location';
 import Detail from './pages/Detail';
+import Cart from './pages/Cart';
 import PageNotFound from './pages/PageNotFound';
 
 import { useState } from 'react';
@@ -24,6 +25,7 @@ function App() {
                     <Route path={ROUTE.LOCATION} element={<Location />} />
                 </Route>
                 <Route path={ROUTE.DETAIL} element={<Detail shoes={shoes} />} />
+                <Route path={ROUTE.CART} element={<Cart />} />
                 <Route path={`*`} element={<PageNotFound />} />
             </Routes>
         </div>

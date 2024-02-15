@@ -3,7 +3,8 @@ const ROUTE = {
     ABOUT: '/about',
     MEMBER: '/about/member',
     LOCATION: '/about/location',
-    DETAIL: '/detail/:id'
+    DETAIL: '/detail/:id',
+    CART: '/cart'
 }
 
 export default ROUTE;
